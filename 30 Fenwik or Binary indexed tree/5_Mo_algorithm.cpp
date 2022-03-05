@@ -1,0 +1,85 @@
+#include "bits/stdc++.h"
+using namespace std;
+int rootn;
+const int N = 1e2;
+int n;
+struct Q
+{
+    int l, r, idx;
+};
+Q q[N];
+
+bool compare(Q q1, Q q2)
+{
+    if (q1.l / rootn == q2.l / rootn)
+    {
+        return q1.r < q2.r;
+    }
+    return q1.l < q2.l;
+}
+
+signed main()
+{
+    cin >> n;
+    vector<int> a(n);
+    for (int i = 0; i < n; i++)
+    {
+        cin >> a[i];
+    }
+    rootn = sqrtl(n);
+    int queries;
+    cin >> queries;
+    for (int i = 0; i < queries; i++)
+    {
+        int l, r;
+        cin >> l >> r;
+        q[i].l = l;
+        q[i].r = r;
+        q[i].idx = i;
+    }
+    sort(q, q + queries, compare);
+    vector<int> ans(queries);
+    int curr_l = 0, curr_r = -1, l, r;
+    int curr_ans = 0;
+    for (int i = 0; i < queries; i++)
+    {
+        l = q[i].l;
+        r = q[i].r;
+        while (curr_r < r)
+        {
+            curr_r++;
+            curr_ans += a[curr_r];
+        }
+        while (curr_l < l)
+        {
+            curr_ans -= a[curr_l];
+            curr_l++;
+        }
+        while (curr_r > r)
+        {
+            curr_ans -= a[curr_r];
+            curr_r--;
+        }
+        while (curr_l > l)
+        {
+            curr_l--;
+            curr_ans += a[curr_l];
+        }
+        ans[q[i].idx] = curr_ans;
+    }
+    for (int i = 0; i < queries; i++)
+    {
+        cout << ans[i] << endl;
+    }
+    return 0;
+}
+/*
+9
+1 5 -2 6 8 -7 1 2 11
+5
+0 1
+1 2
+0 2
+0 8
+2 5
+*/
