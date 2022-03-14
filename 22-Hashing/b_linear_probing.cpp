@@ -23,6 +23,7 @@ void Insert(int H[], int key)
         index = probe(H, key);
     H[index] = key;
 }
+
 int Search(int H[], int key)
 {
     int index = hashing(key);
@@ -31,14 +32,14 @@ int Search(int H[], int key)
         i++;
     return (index + i) % SIZE;
 }
+
 int main()
 {
     int HT[10] = {0};
     Insert(HT, 12);
-
     Insert(HT, 25);
     Insert(HT, 35);
     Insert(HT, 26);
-    printf("\nKey found at %d\n", Search(HT, 35));
+    cout << "Key found at:" << Search(HT, 35);
     return 0;
 }

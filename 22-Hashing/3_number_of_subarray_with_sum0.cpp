@@ -11,7 +11,7 @@ using namespace std;
 int main()
 {
     int n, prefsum = 0, ans = 0;
-    cin>>n;
+    cin >> n;
     vi a(n);
     rep(i, 0, n)
     {
@@ -28,11 +28,9 @@ int main()
     {
         int x = it->ss, y = it->ff;
         if (y != 0)
-        {
             ans += x * (x - 1) / 2;
-        }
-        else if(y == 0)
-        ans += x;
+        else if (y == 0)
+            ans += x;
     }
     cout << ans << endl;
     return 0;
