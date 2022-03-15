@@ -22,11 +22,12 @@ int main()
     vii v(n);
     rep(i, 0, n)
     {
-        cin >> v[i].ff >> v[i].ss; //ff=value and ss=weight
+        cin >> v[i].ff >> v[i].ss; // ff=value and ss=weight
     }
+
     int w;
     cin >> w;
-    sort(v.begin(), v.end(), cc); //cc=custom comparator
+    sort(v.begin(), v.end(), cc); // cc=custom comparator
     double ans = 0;
     rep(i, 0, n)
     {
@@ -38,11 +39,12 @@ int main()
         else
         {
             double vw = (double)v[i].ff / v[i].ss;
-            ans +=(double)vw * w;
+            ans += (double)vw * w;
             w = 0;
             break;
         }
     }
+
     cout << ans << endl;
     return 0;
 }

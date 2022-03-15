@@ -1,4 +1,4 @@
-//example of backtracking
+// example of backtracking
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -76,7 +76,7 @@ bool solvesudoku(int grid[9][9], int row, int col)
             }
         }
 
-        grid[row][col] = 0; //backtracking, since function called for col+1 doesn't return true
+        grid[row][col] = 0; // backtracking, since function called for col+1 doesn't return true
     }
     return false;
 }

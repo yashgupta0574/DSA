@@ -1,4 +1,4 @@
-//we have to divide array into two array of n/2 size then we have to compute max and min diff of elements for a[i] +b[i]
+// we have to divide array into two array of n/2 size then we have to compute max and min diff of elements for a[i] +b[i]
 #include <bits/stdc++.h>
 using namespace std;
 

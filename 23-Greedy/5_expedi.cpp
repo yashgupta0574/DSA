@@ -1,3 +1,4 @@
+// https://www.spoj.com/problems/EXPEDI/
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -19,13 +20,13 @@ int main()
         vector<pii> a(n);
         rep(i, 0, n)
         {
-            cin >> a[i].ff >> a[i].ss; //ff=distanc eof stop from town and ss=amount of fuel
+            cin >> a[i].ff >> a[i].ss; // ff=distanc of stop from town and ss=amount of fuel
         }
-        int l, p;
+        int l, p; // l=distance of truck from town
         cin >> l >> p;
         rep(i, 0, n)
         {
-            a[i].ff = l - a[i].ff;
+            a[i].ff = l - a[i].ff; // ff=distanc of stop from truck
         }
         sort(a.begin(), a.end());
         int ans = 0;
@@ -56,7 +57,7 @@ int main()
         if (flag)
         {
             cout << "-1" << endl;
-            continue; //continue for other test cases
+            continue; // continue for other test cases
         }
         while (!pq.empty() && fuel < l)
         {
@@ -68,7 +69,7 @@ int main()
         {
             cout << "-1" << endl;
         }
-        cout<<ans<<endl;
+        cout << ans << endl;
     }
     return 0;
 }

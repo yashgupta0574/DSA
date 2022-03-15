@@ -60,9 +60,9 @@ int main()
     // 9.end
 
     // 10.erase
-    /*string s = "ABCDEFGH";
+    string s = "ABCDEFGH";
     s.erase(2, 4);
-    cout << s << endl;*/
+    cout << s << endl;
 
     // 11.find
     /*string s="ABCDEFGH";
