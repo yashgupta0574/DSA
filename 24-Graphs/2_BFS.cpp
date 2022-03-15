@@ -15,7 +15,7 @@ int main()
 {
     int n, m;
     cin >> n >> m;
-    vi adj[n + 1];//2d array if adj(n) then 1d array
+    vi adj[n + 1]; // 2d array if adj(n) then 1d array
     rep(i, 0, m)
     {
         int x, y;
@@ -23,11 +23,11 @@ int main()
         adj[x].push_back(y);
         adj[y].push_back(x);
     }
+
     bool vis[n + 1];
     rep(i, 0, n + 1)
-    {
         vis[i] = 0;
-    }
+
     queue<int> q;
     q.push(1);
     vis[1] = 1;

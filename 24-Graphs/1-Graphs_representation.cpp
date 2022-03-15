@@ -41,8 +41,8 @@ int main()
         cout << "No edge" << endl;
     }*/
 
-    //using list of integer
-    int n, m; //n=nodes and m=edges
+    // using list of integer
+    int n, m; // n=nodes and m=edges
     cin >> n >> m;
     vi adj[n + 1];
     rep(i, 0, m)

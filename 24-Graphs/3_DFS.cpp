@@ -14,20 +14,21 @@ bool vis[N];
 
 void dfs(int top, vvi &adj)
 {
-    //preorder
+    // preorder
     vis[top] = 1;
-    cout<<top<<endl;
-    //inorder
+    cout << top << endl;
+    // inorder
     vector<int>::iterator it;
     for (it = adj[top].begin(); it != adj[top].end(); it++)
     {
-        if (vis[*it]);
+        if (vis[*it])
+            ;
         else
         {
             dfs(*it, adj);
         }
     }
-    //postorder
+    // postorder
 }
 
 int main()
