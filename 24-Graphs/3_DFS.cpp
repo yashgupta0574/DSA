@@ -21,12 +21,8 @@ void dfs(int top, vvi &adj)
     vector<int>::iterator it;
     for (it = adj[top].begin(); it != adj[top].end(); it++)
     {
-        if (vis[*it])
-            ;
-        else
-        {
+        if (!vis[*it])
             dfs(*it, adj);
-        }
     }
     // postorder
 }
