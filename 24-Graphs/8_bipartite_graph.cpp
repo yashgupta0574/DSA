@@ -1,3 +1,8 @@
+// 1- A Bipartite Graph is a graph whose vertices can be divided into two independent sets, U and V such that every edge (u, v) either connects a vertex from U to V or a vertex from V to U.
+//  In other words, for every edge (u, v), either u belongs to U and v to V, or u belongs to V and v to U.
+// 2- A bipartite graph is possible if the graph coloring is possible using two
+// colors such that vertices in a set are colored with the same color
+// 3-The graph does not contaion odd length cycle
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -13,7 +18,7 @@ vvi adj;
 vi colour;
 bool bipartite;
 
-void coloring_nodes(int idx, int col) //col=colour that we want to colour the curr node
+void coloring_nodes(int idx, int col) // col=colour that we want to colour the curr node
 {
     if (colour[idx] != -1 && colour[idx] != col)
     {
@@ -56,7 +61,7 @@ int main()
     {
         if (!vis[i])
         {
-            coloring_nodes(i, 1); //we are colouring either 0 or 1
+            coloring_nodes(i, 1); // we are colouring either 0 or 1
         }
     }
     if (bipartite)

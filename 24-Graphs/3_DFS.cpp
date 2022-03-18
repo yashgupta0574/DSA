@@ -1,3 +1,16 @@
+// DFS stands for Depth First Search is a edge based technique.
+// It uses the Stack data structure, performs two stages, first visited vertices are pushed into stack and
+// second if there is no vertices then visited vertices are popped.
+// Ex-
+
+//         A
+//        / \
+//       B   C
+//      /   / \
+//     D   E   F
+// Output is:
+
+// A, B, D, C, E, F
 #include <bits/stdc++.h>
 using namespace std;
 

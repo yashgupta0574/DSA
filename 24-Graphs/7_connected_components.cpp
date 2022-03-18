@@ -43,6 +43,7 @@ int main()
         adj[x].push_back(y);
         adj[y].push_back(x);
     }
+
     rep(i, 0, n)
     {
         if (!vis[i])
@@ -50,6 +51,7 @@ int main()
             components.push_back(get_comp(i));
         }
     }
+
     for (auto i : components)
     {
         cout << i << " ";

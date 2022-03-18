@@ -1,3 +1,7 @@
+// Topological sorting for Directed Acyclic Graph (DAG) is a linear ordering of
+// vertices such that for every directed edge u v, vertex u comes before v in the ordering.
+// Topological Sorting for a graph is not possible if the graph is not a DAG.
+// There can be more than one topological sorting for a graph.
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -24,7 +28,7 @@ int main()
         {
             indegree[x] = 0;
         }
-        adj[x].push_back(y); //x->y
+        adj[x].push_back(y); // x->y
         indegree[y]++;
     }
     queue<int> pq;
@@ -36,6 +40,7 @@ int main()
             pq.push(i);
         }
     }
+
     while (!pq.empty())
     {
         int x = pq.front();
