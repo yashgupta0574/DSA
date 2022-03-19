@@ -1,3 +1,4 @@
+// It's like BFS traversal we traverse every node of BFS and check it's possibility
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -43,7 +44,7 @@ int main()
         {
             int t = q.front();
             q.pop();
-            rep(die, 1, 7) //die
+            rep(die, 1, 7) // die
             {
                 if (t + die == 100)
                 {
@@ -63,7 +64,7 @@ int main()
                     vis[snak[t + die]] == true;
                     q.push(snak[t + die]);
                 }
-                else if (t + die <= 100 && !snak[t + die] && !vis[snak[t + die]] && !lad[t + die])
+                else if (t + die <= 100 && !vis[t + die] && !snak[t + die] && !lad[t + die])
                 {
                     vis[t + die] == true;
                     q.push(t + die);

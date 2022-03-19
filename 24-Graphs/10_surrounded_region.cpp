@@ -12,7 +12,7 @@ using namespace std;
 void change(vector<vector<char>> &A, int x, int y)
 {
     A[x][y] = '*';
-    int dx[] = {0, 0, -1, 1}; //moving in all 4 direction by one step only
+    int dx[] = {0, 0, -1, 1}; // moving in all 4 direction by one step only
     int dy[] = {1, -1, 0, 0};
     rep(i, 0, 4)
     {
@@ -45,7 +45,7 @@ int main()
             {
                 if (A[i][j] == 'O')
                 {
-                    change(A, i, j); //convert O to *
+                    change(A, i, j); // convert O to *
                 }
             }
         }

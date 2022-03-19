@@ -27,9 +27,7 @@ void coloring_nodes(int idx, int col) // col=colour that we want to colour the c
     }
     colour[idx] = col;
     if (vis[idx])
-    {
         return;
-    }
     vis[idx] = true;
     for (auto i : adj[idx])
     {
