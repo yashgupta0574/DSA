@@ -42,7 +42,7 @@ int main()
     {
         int x, y;
         cin >> x >> y;
-        adj[x].push_back(y); //x->y
+        adj[x].push_back(y); // x->y
     }
     bool cycle = false;
     vector<bool> stack(n, false);
