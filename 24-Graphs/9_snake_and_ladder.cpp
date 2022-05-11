@@ -20,12 +20,14 @@ int main()
     map<int, int> snak;
     map<int, int> lad;
     cin >> ladders;
+
     rep(i, 0, ladders)
     {
         int u, v;
         cin >> u >> v;
         lad[u] = v;
     }
+
     cin >> snakes;
     rep(i, 0, snakes)
     {

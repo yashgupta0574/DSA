@@ -28,7 +28,7 @@ int main()
 {
     int n, m;
     cin >> n >> m;
-    vi adj[n + 1]; // 2d array if adj(n) then 1d array
+    vi adj[n + 1]; // It is 2d array if adj(n) then 1d array
     rep(i, 0, m)
     {
         int x, y;

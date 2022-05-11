@@ -30,6 +30,7 @@ void dfs(int top, vvi &adj)
     // preorder
     vis[top] = 1;
     cout << top << endl;
+
     // inorder
     vector<int>::iterator it;
     for (it = adj[top].begin(); it != adj[top].end(); it++)
@@ -37,7 +38,10 @@ void dfs(int top, vvi &adj)
         if (!vis[*it])
             dfs(*it, adj);
     }
+
     // postorder
+    // cout << top << endl;
+    // uncomment line 43 and comment line 32 to get postorder
 }
 
 int main()
