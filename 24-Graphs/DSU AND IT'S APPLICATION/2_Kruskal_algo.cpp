@@ -1,4 +1,6 @@
-//minimum spanning tree
+// minimum spanning tree
+// Given a connected and undirected graph, a spanning tree of that graph is a subgraph
+// that is a tree and connects all the vertices together.
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -11,7 +13,7 @@ using namespace std;
 #define rep(i, a, b) for (int i = a; i < b; i++)
 int N = 1e5 + 6;
 vi parent;
-vi sz; //sz=size
+vi sz; // sz=size
 
 void make_set(int v)
 {
@@ -30,8 +32,8 @@ int find_set(int v)
 
 void union_set(int a, int b)
 {
-    a = find_set(a); //union hamesha leaders ka hota h
-    b = find_set(b); //union hamesha leaders ka hota h
+    a = find_set(a); // union is always done of the leaders of their respective sets
+    b = find_set(b); // union is always done of the leaders of their respective sets
     if (a != b)
     {
         if (sz[a] < sz[b])
@@ -47,8 +49,8 @@ int main()
 {
     int n, m;
     cin >> n >> m;
-    parent = vi(n+1);
-    sz = vi(n+1);
+    parent = vi(n + 1);
+    sz = vi(n + 1);
     vvi edges;
     int cost = 0;
     rep(i, 0, n)
@@ -60,7 +62,7 @@ int main()
         int u, v, w;
         cin >> u >> v >> w;
         edges.push_back({w, u, v});
-    } 
+    }
     sort(edges.begin(), edges.end());
     for (auto i : edges)
     {
@@ -71,8 +73,8 @@ int main()
         int y = find_set(v);
         if (x == y)
         {
-            //cycle = true;
-            continue; //because we don't want cycle
+            // cycle = true;
+            continue; // because we don't want cycle
         }
         else
         {
@@ -89,7 +91,7 @@ int main()
 1 2 5
 2 3 6
 4 3 2
-1 4 9  
+1 4 9
 3 5 5
 5 6 10
 6 7 7

@@ -1,4 +1,4 @@
-//minimum spanning tree
+// Minimum spanning tree
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -9,13 +9,14 @@ using namespace std;
 #define ff first
 #define ss second
 #define rep(i, a, b) for (int i = a; i < b; i++)
-const int N = 1e2+5;
-const int INF = 1e9+1;
+const int N = 1e2 + 5;
+const int INF = 1e9 + 1;
 int n, m;
 int cost = 0;
 vector<vi> g[N];
 vector<int> dist(N), parent(N);
 vector<bool> vis(N);
+
 void primsMST(int source)
 {
     rep(i, 0, n)
@@ -38,7 +39,7 @@ void primsMST(int source)
         cost += w;
         for (auto it : g[x[1]])
         {
-            if (vis[it[0]]) //becuase at 0th index we have vertex and at 1st we have weight
+            if (vis[it[0]]) // becuase at 0th index we have vertex and at 1st we have weight
             {
                 continue;
             }

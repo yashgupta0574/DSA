@@ -24,7 +24,7 @@ int main()
     }
     int source;
     cin >> source;
-    dist[source]=0;
+    dist[source] = 0;
     set<pii> s;
     s.insert({0, source});
     //(wt,vertex)
@@ -34,8 +34,8 @@ int main()
         s.erase(x);
         for (auto it : graph[x.ss])
         {
-            //it.ff=vertex we inserted & checking if dist of neigbour vertex
-            //is greater than dist(to reach vertex x) i.e (x.ss) + dist to reach from x to it i.e(it.ss)
+            // it.ff=vertex we inserted & checking if dist of neigbour vertex
+            // is greater than dist(to reach vertex x) i.e (x.ss) + dist to reach from x to it i.e(it.ss)
             if (dist[it.ff] > dist[x.ss] + it.ss)
             {
                 s.erase({dist[it.ff], it.ff});

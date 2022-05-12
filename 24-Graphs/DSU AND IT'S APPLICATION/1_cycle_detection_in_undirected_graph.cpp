@@ -1,3 +1,4 @@
+// REMEMBER: We cannot find Cycle in directed graphs using DSU
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -30,8 +31,8 @@ int find_set(int v)
 
 void union_set(int a, int b)
 {
-    a = find_set(a); // union hamesha leaders ka hota h
-    b = find_set(b); // union hamesha leaders ka hota h
+    a = find_set(a); // union is always done of the leaders of their respective sets
+    b = find_set(b); // union is always done of the leaders of their respective sets
     if (a != b)
     {
         if (sz[a] < sz[b])
@@ -51,10 +52,12 @@ int main()
     sz = vi(n);
     cycle = false;
     vvi edges;
+
     rep(i, 0, n)
     {
         make_set(i);
     }
+
     rep(i, 0, m)
     {
         int u, v;
