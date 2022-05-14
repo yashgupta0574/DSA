@@ -1,3 +1,6 @@
+// Better than Dijkstra because
+// 1-Work better for Negative edges and negative cycles
+// 2-Can detect negative cycles as well
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -24,8 +27,7 @@ int main()
     int source;
     cin >> source;
     dist[source] = 0;
-    set<pii> s;
-    rep(i, 0, n - 1)
+    rep(i, 0, n - 1) // relaxing edges n-1 times
     {
         for (auto e : edges)
         {

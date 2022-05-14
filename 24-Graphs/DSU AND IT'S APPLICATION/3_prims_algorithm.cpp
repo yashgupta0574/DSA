@@ -39,7 +39,7 @@ void primsMST(int source)
         cost += w;
         for (auto it : g[x[1]])
         {
-            if (vis[it[0]]) // becuase at 0th index we have vertex and at 1st we have weight
+            if (vis[it[0]]) // because at 0th index we have vertex and at 1st we have weight (refer line 64 & 65)
             {
                 continue;
             }
@@ -69,6 +69,7 @@ int main()
 
     return 0;
 }
+
 /*
 4 5
 0 1 10

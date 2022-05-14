@@ -31,7 +31,8 @@ int minsquare(int n)
 
 int main()
 {
-    //memoization{top to bottom}
+    // memoization{top to bottom}
+    // memoize-create a dp table and store the results
     /*int n;
     cin >> n;
     rep(i, 0, n + 1)
@@ -40,7 +41,7 @@ int main()
     }
     cout << minsquare(n) << endl;*/
 
-    //tabulation(bottom up method)
+    // tabulation(bottom up method)
     int n;
     cin >> n;
     vi dp(n + 1, MOD);

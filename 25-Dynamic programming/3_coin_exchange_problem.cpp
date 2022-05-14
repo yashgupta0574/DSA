@@ -10,11 +10,11 @@ using namespace std;
 #define rep(i, a, b) for (int i = a; i < b; i++)
 const int N = 1e2 + 2, MOD = 1e9 + 1;
 
-//int dp[N];
+// int dp[N];
 
 int main()
 {
-    //iterative
+    // iterative
     /*int m;
     cin >> m;
     vi s(m);
@@ -39,7 +39,7 @@ int main()
     }
     cout << dp[m][x];*/
 
-    //iterative with space optimization
+    // iterative with space optimization
     int m;
     cin >> m;
     vi s(m);
@@ -47,21 +47,22 @@ int main()
     {
         cin >> s[i];
     }
+
     int x;
     cin >> x;
     vi dp(x + 1, 0);
     dp[0] = 1;
-    rep(i, 0, m+1)
+    rep(i, 0, m + 1)
     {
         rep(j, 0, x + 1)
         {
-            if ((j - s[i-1]) >= 0)
+            if ((j - s[i - 1]) >= 0)
             {
-                dp[j] += dp[j - s[i-1]];
+                dp[j] += dp[j - s[i - 1]];
             }
-            cout << dp[j] << " ";
+            //cout << dp[j] << " ";
         }
-        cout << endl;
+        //cout << endl;
     }
     cout << dp[x] << endl;
     return 0;

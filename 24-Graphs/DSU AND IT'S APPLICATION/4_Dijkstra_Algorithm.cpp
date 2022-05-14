@@ -1,3 +1,5 @@
+// To find shortest distance between source and any vertex v
+//  Doesn't work for negative edges
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -9,6 +11,7 @@ using namespace std;
 #define ss second
 #define rep(i, a, b) for (int i = a; i < b; i++)
 const int inf = 1e7;
+
 int main()
 {
     int n, m;

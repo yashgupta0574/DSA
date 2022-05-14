@@ -1,3 +1,4 @@
+// Valid for all Directed,Undirected,weighted and unweighted
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -37,8 +38,7 @@ int main()
         {
             if (dist[i][j] == inf)
             {
-                cout << "INF"
-                     << " ";
+                cout << "INF ";
             }
             else
             {
