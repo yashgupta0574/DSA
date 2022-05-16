@@ -1,3 +1,7 @@
+// You are given a string s consisting of lowercase letters latin letters (‘a’ to ‘z’) and
+// some ‘?’. Your task is to find the number of subsequences ‘abc’ in all the strings.
+//‘?’ should be replaced by either of {‘a’, ‘b’, ‘c’}.
+
 #include <bits/stdc++.h>
 using namespace std;
 
