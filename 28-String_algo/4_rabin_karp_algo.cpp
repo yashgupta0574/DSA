@@ -10,7 +10,7 @@ using namespace std;
 #define rep(i, a, b) for (int i = a; i < b; i++)
 #define int long long
 const int m = 1e9 + 7, N = 1e2;
-int p = 31; //we can take p any number > 26
+int p = 31; // we can take p any number > 26
 vector<long long> powers(N);
 
 int32_t main()
@@ -20,8 +20,8 @@ int32_t main()
     {
         powers[i] = (powers[i - 1] * p) % m;
     }
-    string t = "3rd sem chal raha hai";
-    string a = "ha";
+    string t = "4th sem just completed";
+    string a = "let";
     int T = t.size();
     int A = a.size();
     vector<long long> hash(T + 1, 0);
@@ -32,12 +32,12 @@ int32_t main()
     int hs = 0;
     rep(i, 0, A)
     {
-        hs = (hs + (a[i] - 'a' + 1)* powers[i]) % m;
+        hs = (hs + (a[i] - 'a' + 1) * powers[i]) % m;
     }
     rep(i, 0, T - A + 1)
     {
         int curr_h = (hash[i + A] - hash[i] + m) % m; //+m because h[i+A] can be less than h[i] so that ans would not come negative
-        if (curr_h == (hs*powers[i])%m)
+        if (curr_h == (hs * powers[i]) % m)
         {
             cout << "Found at:" << i << endl;
         }

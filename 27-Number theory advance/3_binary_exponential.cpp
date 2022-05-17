@@ -10,7 +10,7 @@ using namespace std;
 #define rep(i, a, b) for (int i = a; i < b; i++)
 const int MOD = 1e9 + 7;
 
-int poweriterative(int a, int n)
+int powerIterative(int a, int n)
 {
     int ans = 1;
     a = a % MOD;
@@ -26,14 +26,14 @@ int poweriterative(int a, int n)
     return ans;
 }
 
-int powerrecursive(int a, int n)
+int powerRecursive(int a, int n)
 {
     if (n == 0)
     {
         return 1;
     }
     int ans;
-    int p = powerrecursive(a, n / 2);
+    int p = powerRecursive(a, n / 2);
     if (n % 2 == 0)
     {
         return ans = p * p;
@@ -48,7 +48,7 @@ int main()
 {
     int a, n;
     cin >> a >> n;
-    //cout << poweriterative(a, n) << endl;//iterarive
-    cout << powerrecursive(a, n) << endl;
+    // cout << powerIterative(a, n) << endl;//iterarive
+    cout << powerRecursive(a, n) << endl;
     return 0;
 }

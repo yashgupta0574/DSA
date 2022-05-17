@@ -1,4 +1,4 @@
-//multiplicative modulo inverse also
+// multiplicative modulo inverse also
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -10,15 +10,15 @@ using namespace std;
 #define ss second
 #define rep(i, a, b) for (int i = a; i < b; i++)
 
-//ax+by=gcd(a,b)
-//gcd(d,0)=d
+// ax+by=gcd(a,b)
+// gcd(d,0)=d
 
 struct triplet
 {
     int x, y, gcd;
 };
 
-triplet extendedeuclid(int a, int b)
+triplet extendedEuclid(int a, int b)
 {
     triplet ans;
     if (b == 0)
@@ -28,7 +28,7 @@ triplet extendedeuclid(int a, int b)
         ans.gcd = a;
         return ans;
     }
-    triplet smallans = extendedeuclid(b, a % b);
+    triplet smallans = extendedEuclid(b, a % b);
     ans.x = smallans.y;
     ans.y = smallans.x - (a / b) * smallans.y;
     ans.gcd = smallans.gcd;
@@ -39,8 +39,8 @@ int main()
 {
     int a, b;
     cin >> a >> b;
-    triplet ans = extendedeuclid(a, b);
+    triplet ans = extendedEuclid(a, b);
     cout << ans.x << " " << ans.y << " " << ans.gcd << endl;
-    //here x is multiplicative modulo inverse m
+    // here x is multiplicative modulo inverse m
     return 0;
 }

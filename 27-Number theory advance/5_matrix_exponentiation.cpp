@@ -26,7 +26,7 @@ vvi multiply(vvi &a, vvi &b)
     return ans;
 }
 
-vector<vector<int>> matrixexponentiate(vector<vector<int>> &a, int n)
+vector<vector<int>> matrixExponentiate(vector<vector<int>> &a, int n)
 {
     int sz = a.size();
     if (n == 0)
@@ -42,7 +42,7 @@ vector<vector<int>> matrixexponentiate(vector<vector<int>> &a, int n)
     {
         return a;
     }
-    vvi temp = matrixexponentiate(a, n / 2);
+    vvi temp = matrixExponentiate(a, n / 2);
     vvi ans = multiply(temp, temp);
     if (n % 2 != 0)
     {
@@ -56,7 +56,7 @@ int main()
     int n;
     cin >> n;
     vector<vector<int>> a = {{1, 1}, {1, 0}};
-    vector<vector<int>> ans = matrixexponentiate(a, n);
+    vector<vector<int>> ans = matrixExponentiate(a, n);
     int sz = ans.size();
     rep(i, 0, sz)
     {

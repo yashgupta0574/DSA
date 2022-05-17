@@ -1,5 +1,5 @@
-//application of Fermat little and wilson theorem
-//to find: n! mod p where p is prime and n is integer
+// application of Fermat little and wilson theorem
+// to find: n! mod p where p is prime and n is integer
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -11,7 +11,7 @@ using namespace std;
 #define ss second
 #define rep(i, a, b) for (int i = a; i < b; i++)
 
-int poweriterative(int i, int x, int p) //i^x
+int powerIterative(int i, int x, int p) // i^x
 {
     int ans = 1;
     i = i % p;
@@ -27,21 +27,21 @@ int poweriterative(int i, int x, int p) //i^x
     return ans;
 }
 
-int calculatemoduloinverse(int i, int p)
+int calculateModuloInverse(int i, int p)
 {
-    return poweriterative(i, p - 2, p);
+    return powerIterative(i, p - 2, p);
 }
 
-int calculatemodulo(int n, int p)
+int calculateModulo(int n, int p)
 {
     if (p < n)
     {
         return 0;
     }
-    int res = p - 1; //wilson theorem
+    int res = p - 1; // wilson theorem
     rep(i, n + 1, p)
     {
-        res = (res * calculatemoduloinverse(i, p)) % p;
+        res = (res * calculateModuloInverse(i, p)) % p;
     }
     return res;
 }
@@ -50,6 +50,6 @@ int main()
 {
     int n, p;
     cin >> n >> p;
-    cout << calculatemodulo(n, p) << endl;
+    cout << calculateModulo(n, p) << endl;
     return 0;
 }

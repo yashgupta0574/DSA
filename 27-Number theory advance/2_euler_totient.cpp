@@ -27,7 +27,7 @@ int main()
                 totient[j] *= (i - 1);
                 totient[j] /= i;
             }
-            totient[i] = i - 1; //here i will be prime so num from 1tp i-1 will be totient
+            totient[i] = i - 1; // here i will be prime so num from 1 to i-1 will be totient
         }
     }
     for (int i = 0; i <= n; i++)

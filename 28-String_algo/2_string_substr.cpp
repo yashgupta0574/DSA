@@ -13,7 +13,7 @@ const int m = 1e9 + 7, N = 1e2;
 int main()
 {
     string s = "ya";
-    string t = "yoboy ya how r y ya";
+    string t = "yupp, ya how r y ya";
     int S = s.size(), T = t.size();
     rep(i, 0, T - S + 1)
     {
@@ -22,6 +22,6 @@ int main()
             cout << "Found at: " << i << endl;
         }
     }
-    //time complexity=O(ST);
+    // time complexity=O(ST);
     return 0;
 }
