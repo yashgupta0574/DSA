@@ -1,4 +1,4 @@
-//we can change any k particular elements of any one array to make more elements in common subsequence
+// we can change any k particular elements of any one array to make more elements in common subsequence
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -31,7 +31,7 @@ int solve(int i, int j, int k)
     }
     if (k > 0)
     {
-        c2 = 1 + solve(i + 1, j + 1, k - 1); //man le ki humne change kar diya particular element to make it equal with other arr element
+        c2 = 1 + solve(i + 1, j + 1, k - 1); // we assume that we have already changed the particular element to make it equal with other arr element
     }
     c3 = max(solve(i + 1, j, k), solve(i, j + 1, k));
     return dp[i][j][k] = max({c1, c2, c3});

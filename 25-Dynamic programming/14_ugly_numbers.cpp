@@ -1,4 +1,4 @@
-//ugly nos are those whose prime factorization include 2,3and 5 only
+// ugly nos are those whose prime factorization include 2,3and 5 only
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -14,14 +14,14 @@ const int N = 1e2 + 2, MOD = 1e9 + 1;
 int main()
 {
     int n = 10;
-    //cin >> n;
+    // cin >> n;
     vi dp(n + 1, 1);
     dp[0] = 1;
-    //int c2 = 0, c3 = 0, c5 = 0;
-    int c2(0), c3(0), c5(0);
+    // int c2 = 0, c3 = 0, c5 = 0;
+    int c2(0), c3(0), c5(0); // it means c2=c3=c5=0
     rep(i, 1, n + 1)
     {
-        //dp[i] = min(2 * dp[c2], min(3 * dp[c3], 5 * dp[c5]));
+        // dp[i] = min(2 * dp[c2], min(3 * dp[c3], 5 * dp[c5]));
         dp[i] = min({2 * dp[c2], 3 * dp[c3], 5 * dp[c5]});
         if (dp[i] == 2 * dp[c2])
         {

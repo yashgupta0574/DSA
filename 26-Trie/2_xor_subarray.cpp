@@ -54,7 +54,7 @@ int helper(Trienode *root, vector<int> &a)
             int bit = ((num >> i) & 1) ? 0 : 1;
             if (it->next[bit])
             {
-                curr_max <<=1;
+                curr_max <<= 1;
                 curr_max |= 1;
                 it = it->next[bit];
             }

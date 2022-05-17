@@ -18,6 +18,7 @@ int main()
     vi forward(n, 1);
     vi backward(n, 1);
     int ans = 0;
+    
     rep(i, 1, n)
     {
         rep(j, 0, i)

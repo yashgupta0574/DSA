@@ -74,7 +74,7 @@ public:
         {
             if (it->next[c - 'a'] == NULL)
             {
-                cout << "no suggestion" << endl;
+                cout << "No suggestions!" << endl;
                 insert(s);
                 return;
             }
