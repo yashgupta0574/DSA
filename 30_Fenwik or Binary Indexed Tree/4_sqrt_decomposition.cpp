@@ -11,7 +11,7 @@ signed main()
         cin >> a[i];
     }
     int len = sqrtl(n) + 1;
-    cout<<len;
+    cout << len;
     vector<int> b(len);
     for (int i = 0; i < len; i++)
     {

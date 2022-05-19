@@ -22,7 +22,7 @@ void sumreplace(node *root)
         return;
     }
     sumreplace(root->left);
-    //sumreplace(root->right);
+    // sumreplace(root->right);
     if (root->left != NULL)
     {
         root->data += root->left->data;

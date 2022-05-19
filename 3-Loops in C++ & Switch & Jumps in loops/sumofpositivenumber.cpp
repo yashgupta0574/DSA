@@ -1,19 +1,22 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-int main(){
+int main()
+{
 
-    int number;
-    int sum=0;
+  int number;
+  int sum = 0;
 
-  cout<<"enter a number";
-    cin>>number;
+  cout << "enter a number";
+  cin >> number;
 
-    while(number>=0){
-        sum +=number;
-        cout<<"enter a number";
-        cin>>number;}
-    
-    cout<<"\n the sum is"<<sum<<endl;
+  while (number >= 0)
+  {
+    sum += number;
+    cout << "enter a number";
+    cin >> number;
+  }
 
-    return 0;
+  cout << "\n the sum is" << sum << endl;
+
+  return 0;
 }
