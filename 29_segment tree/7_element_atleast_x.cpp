@@ -101,6 +101,7 @@ int main()
                 }
             }
         }
+        
         if (ans == n)
         {
             cout << -1 << endl;

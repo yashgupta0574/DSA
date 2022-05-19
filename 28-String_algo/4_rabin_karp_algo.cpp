@@ -30,10 +30,12 @@ int32_t main()
         hash[i + 1] = (hash[i] + (t[i] - 'a' + 1) * powers[i]) % m;
     }
     int hs = 0;
+
     rep(i, 0, A)
     {
         hs = (hs + (a[i] - 'a' + 1) * powers[i]) % m;
     }
+
     rep(i, 0, T - A + 1)
     {
         int curr_h = (hash[i + A] - hash[i] + m) % m; //+m because h[i+A] can be less than h[i] so that ans would not come negative

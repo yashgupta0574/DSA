@@ -9,16 +9,16 @@ using namespace std;
 #define ss second
 #define rep(i, a, b) for (int i = a; i < b; i++)
 
-void computelps(string t, int m, vi lps)
+void computeLps(string t, int m, vi lps)
 {
     int len = 0;
     int i = 1;
-    lps[0] = 0;
+    lps[0] = 0; // lps=longest prefix which is same as suffix
     while (i < m)
     {
         if (t[i] == t[len])
         {
-            lps[i]=len+1;
+            lps[i] = len + 1;
             i++;
             len++;
         }
@@ -44,7 +44,7 @@ int main()
     int n = s.size();
     int m = t.size();
     vi lps(m + 1, 0);
-    computelps(t, m, lps);
+    computeLps(t, m, lps);
     int i = 0, j = 0;
     while (i < m)
     {

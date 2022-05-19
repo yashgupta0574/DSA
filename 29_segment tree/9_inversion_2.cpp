@@ -1,4 +1,6 @@
-// i didn;t understood this code
+// Reverse of inversion question
+// # Advanced version
+// # Needs to brush up the the concepts for this problem
 #include "bits/stdc++.h"
 using namespace std;
 #define int long long

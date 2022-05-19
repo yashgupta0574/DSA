@@ -34,10 +34,10 @@ void buildtree(int node, int st, int en)
         tree[node].ff = tree[2 * node + 1].ff;
         tree[node].ss = tree[2 * node + 1].ss;
     }
-    else //tree[2 * node + 1].ff == tree[2 * node].ff
+    else // tree[2 * node + 1].ff == tree[2 * node].ff
     {
         tree[node].ff = tree[2 * node].ff;
-        tree[node].ss = tree[2 * node].ss + tree[2 * node].ss;
+        tree[node].ss = tree[2 * node].ss + tree[2 * node + 1].ss;
     }
     return;
 }
@@ -50,9 +50,9 @@ pii query(int node, int st, int en, int l, int r)
     }
     if (l <= st && r >= en)
     {
-        return tree[node]; //complete segment
+        return tree[node]; // complete segment
     }
-    //partial segment
+    // partial segment
     int mid = (st + en) / 2;
     pii q1 = query(2 * node, st, mid, l, r);
     pii q2 = query(2 * node + 1, mid + 1, en, l, r);
@@ -67,7 +67,7 @@ pii query(int node, int st, int en, int l, int r)
     }
     else
     {
-        q.ff = q1.ff; //we can also write q=q2 as q1=q2
+        q.ff = q1.ff; // we can also write q=q2 as q1=q2
         q.ss = q1.ss + q2.ss;
     }
     return q;
@@ -103,7 +103,7 @@ void update(int node, int st, int en, int idx, int val)
         tree[node].ff = tree[2 * node + 1].ff;
         tree[node].ss = tree[2 * node + 1].ss;
     }
-    else //tree[2 * node + 1].ff == tree[2 * node].ff
+    else // tree[2 * node + 1].ff == tree[2 * node].ff
     {
         tree[node].ff = tree[2 * node].ff;
         tree[node].ss = tree[2 * node].ss + tree[2 * node + 1].ss;
@@ -126,7 +126,7 @@ int main()
         cin >> type;
         if (type == 1)
         {
-            //update
+            // update
             int idx, val;
             cin >> idx >> val;
             update(1, 0, n - 1, idx, val);
@@ -134,7 +134,7 @@ int main()
 
         else if (type == 2)
         {
-            //query
+            // query
             int l, r;
             cin >> l >> r;
             pii ans = query(1, 0, n - 1, l, r);

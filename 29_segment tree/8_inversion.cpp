@@ -1,4 +1,4 @@
-//present sir approach
+// Present sir approach
 #include "bits/stdc++.h"
 using namespace std;
 #define int long long
@@ -19,7 +19,6 @@ int query(int node, int st, int en, int l, int r)
     int q2 = query(2 * node + 1, mid + 1, en, l, r);
 
     return q1 + q2;
-    ;
 }
 
 void update(int node, int st, int en, int idx, int val)
