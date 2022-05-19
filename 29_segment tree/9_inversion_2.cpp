@@ -86,10 +86,11 @@ signed main()
     for (int i = n - 1; i >= 0; i--)
     {
         int k = currPresentSirs - b[i] - 1;
-
+        cout << k << " ";
         currPresentSirs--;
 
         int temp = query(1, 0, n - 1, k);
+        cout << temp << endl;
         update(1, 0, n - 1, temp, 0);
         ans.push_back(temp + 1);
     }
