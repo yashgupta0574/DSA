@@ -9,7 +9,6 @@ void update(int idx, int val)
     {
         bit[idx] += val;
         idx += (idx & (-idx));
-        cout<<idx<<endl;
     }
 }
 
@@ -19,7 +18,7 @@ int query(int idx)
     while (idx > 0)
     {
         ans += bit[idx];
-        idx = idx - (idx & (-idx));
+        idx = (idx & (-idx));
     }
     return ans;
 }
@@ -45,6 +44,6 @@ signed main()
         cin >> idx;
         cout << query(idx) << endl;
     }
-    cout<<bit[5]<<endl;
+    cout << bit[5] << endl;
     return 0;
 }

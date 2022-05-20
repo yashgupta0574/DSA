@@ -18,7 +18,7 @@ int query(int idx)
     while (idx > 0)
     {
         ans += bit[idx];
-        idx = idx - (idx & (-idx));
+        idx -= (idx & (-idx));
     }
     return ans;
 }
@@ -39,7 +39,7 @@ signed main()
     {
         int type;
         cin >> type;
-        if (type == 1) //query
+        if (type == 1) // query
         {
             int l, r;
             cin >> l >> r;
@@ -47,11 +47,11 @@ signed main()
             ans = query(r) - query(l - 1);
             cout << ans << endl;
         }
-        else if (type == 2) //update
+        else if (type == 2) // update
         {
             int idx, val;
             cin >> idx >> val;
-            update(idx, val - a[idx]); //final=a[idx]+val-a[idx]=val
+            update(idx, val - a[idx]); // final=a[idx]+val-a[idx]=val
             a[idx] = val;
         }
     }

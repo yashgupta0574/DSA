@@ -30,7 +30,7 @@ int main()
             cin >> t;
             cout << *s.find_by_order(t) << endl;
         }
-        else //c==3
+        else // c==3
         {
             int t;
             cin >> t;
