@@ -30,15 +30,21 @@ int main()
         }
         column_end--;
 
-        for (int k = column_end; k >= column_start; k--)
+        if (row_start <= row_end)
         {
-            cout << a[row_end][k] << " ";
+            for (int k = column_end; k >= column_start; k--)
+            {
+                cout << a[row_end][k] << " ";
+            }
         }
         row_end--;
 
-        for (int k = row_end; k >= row_start; k--)
+        if (column_start <= column_end)
         {
-            cout << a[k][column_start] << " ";
+            for (int k = row_end; k >= row_start; k--)
+            {
+                cout << a[k][column_start] << " ";
+            }
         }
         column_start++;
     }

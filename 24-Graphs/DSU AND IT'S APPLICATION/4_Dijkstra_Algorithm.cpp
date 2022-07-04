@@ -47,6 +47,7 @@ int main()
             }
         }
     }
+
     rep(i, 1, n + 1)
     {
         if (dist[i] < inf)

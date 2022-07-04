@@ -34,7 +34,7 @@ int lcs(string &s1, string &s2, string &s3, int n, int m, int l)
 
 int main()
 {
-    //memoization
+    // memoization
     string s1, s2, s3;
     cin >> s1 >> s2 >> s3;
     int n = s1.size();

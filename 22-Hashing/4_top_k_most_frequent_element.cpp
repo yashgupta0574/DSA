@@ -83,8 +83,7 @@ void print_N_mostFrequentNumber(int arr[], int n, int k)
     // of the comparison operator 'compare'
     // element with the highest frequency is the root of 'pq'
     // in case of conflicts, larger element is the root
-    priority_queue<pair<int, int>, vector<pair<int, int>>, compare> // maxheap
-        pq(um.begin(), um.end());
+    priority_queue<pair<int, int>, vector<pair<int, int>>, compare> pq(um.begin(), um.end()); // maxheap
 
     cout << k << " numbers with most occurrences are:\n";
     for (int i = 1; i <= k; i++)
@@ -96,7 +95,7 @@ void print_N_mostFrequentNumber(int arr[], int n, int k)
 
 int main()
 {
-    int arr[] = {3, 1, 4, 4, 5, 2, 6, 1};
+    int arr[] = {2, 1, 4, 4, 5, 2, 6, 1};
     int n = sizeof(arr) / sizeof(arr[0]);
     int k = 2;
     print_N_mostFrequentNumber(arr, n, k);

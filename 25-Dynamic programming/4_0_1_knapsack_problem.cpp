@@ -10,7 +10,7 @@ using namespace std;
 #define rep(i, a, b) for (int i = a; i < b; i++)
 const int N = 1e2 + 2, MOD = 1e9 + 1;
 
-//int dp[N][N];
+// int dp[N][N];
 vi val, wt;
 
 /*int knapsack(int n, int w)
@@ -40,7 +40,7 @@ vi val, wt;
 
 int main()
 {
-    //memoization
+    // memoization
     /*int n;
     cin >> n;
     rep(i, 0, N)
@@ -64,7 +64,7 @@ int main()
     cin >> w;
     cout << knapsack(n, w) << endl;*/
 
-    //iterative
+    // iterative
     int n;
     cin >> n;
     wt = vi(n + 1);

@@ -35,6 +35,21 @@ void flatten(node *root)
         righttail->right = temp;
     }
     flatten(root->right);
+
+    // if (root->left != NULL)
+    // {
+    //     flatten(root->left);
+    //     flatten(root->right);
+    //     node *temp = root->right;
+    //     root->right = root->left;
+    //     root->left = NULL;
+    //     node *righttail = root->right;
+    //     while (righttail->right != NULL)
+    //     {
+    //         righttail = righttail->right;
+    //     }
+    //     righttail->right = temp;
+    // }
 }
 
 void inorder(struct node *root)

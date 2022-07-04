@@ -1,4 +1,4 @@
-//pop operation costly
+// pop operation costly
 #include <bits/stdc++.h>
 using namespace std;
 

@@ -38,7 +38,7 @@ void form_number(vector<int> arr, int k)
 int main()
 {
     vector<int> arr = {84, 23, 45, 12, 56, 82};
-    int k = 3; //no of integer we want in pair
+    int k = 3; // no of integer we want in pair
     form_number(arr, k);
     return 0;
 }

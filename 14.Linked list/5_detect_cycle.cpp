@@ -12,6 +12,7 @@ public:
         next = NULL;
     }
 };
+
 void insertatTail(node *&head, int val)
 {
     node *n = new node(val);

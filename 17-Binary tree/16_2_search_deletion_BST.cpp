@@ -120,7 +120,7 @@ int main()
     {
         cout << "Key not found" << endl;
     }*/
-    root = deleteinBST(root, 2);
+    root = deleteinBST(root, 5);
     inorder(root);
     cout << endl;
     return 0;

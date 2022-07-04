@@ -2,7 +2,7 @@
 //  In other words, for every edge (u, v), either u belongs to U and v to V, or u belongs to V and v to U.
 // 2- A bipartite graph is possible if the graph coloring is possible using two
 // colors such that vertices in a set are colored with the same color
-// 3-The graph does not contaion odd length cycle
+// 3-The graph does not contain odd length cycle
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -26,8 +26,7 @@ void coloring_nodes(int idx, int col) // col=colour that we want to colour the c
         return;
     }
     colour[idx] = col;
-    if (vis[idx])
-        return;
+    if (vis[idx]) return;
     vis[idx] = true;
     for (auto i : adj[idx])
     {

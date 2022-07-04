@@ -12,8 +12,8 @@ int smallest_subarray_sum_greater_than_x(int arr[], int n, int x)
         }
         while (sum > x && start < n)
         {
+            ans = min(ans, end - 1 - start);
             sum -= arr[start++];
-            ans = min(ans, end - start);
         }
     }
     return ans;

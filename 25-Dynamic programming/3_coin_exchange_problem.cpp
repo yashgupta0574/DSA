@@ -60,9 +60,9 @@ int main()
             {
                 dp[j] += dp[j - s[i - 1]];
             }
-            //cout << dp[j] << " ";
+            // cout << dp[j] << " ";
         }
-        //cout << endl;
+        // cout << endl;
     }
     cout << dp[x] << endl;
     return 0;

@@ -24,7 +24,7 @@ int main()
         cin >> start >> end;
         v.push_back({start, end});
     }
-    sort(v.begin(), v.end(), cc); //cc=custom comparator
+    sort(v.begin(), v.end(), cc); // cc=custom comparator
     int take = 1;
     int end = v[0][1];
     rep(i, 0, n)

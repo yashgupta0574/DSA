@@ -43,6 +43,7 @@ int main()
     {
         arr[i] = new int[n];
     }
+
     for (int i = 0; i < n; i++)
     {
         for (int j = 0; j < n; j++)
@@ -50,6 +51,7 @@ int main()
             cin >> arr[i][j];
         }
     }
+
     int **solarr = new int *[n];
     for (int i = 0; i < n; i++)
     {

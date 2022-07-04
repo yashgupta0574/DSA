@@ -11,6 +11,7 @@ vector<vector<int>> permute(vector<int> nums)
     } while (next_permutation(nums.begin(), nums.end()));
     return ans;
 }
+
 int32_t main()
 {
     vector<vector<int>> res = permute({1, 2, 2, 3});

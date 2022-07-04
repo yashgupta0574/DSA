@@ -36,7 +36,7 @@ int fib(int n)
 
 int main()
 {
-    //memoization{top to bottom}
+    // memoization{top to bottom}
     /*int n;
     cin >> n;
     rep(i, 0, n + 1)
@@ -45,7 +45,7 @@ int main()
     }
     cout << fib(n) << endl;*/
 
-    //tabulation(bottom up method)
+    // tabulation(bottom up method)
     int n;
     cin >> n;
     vi fib(n + 1);

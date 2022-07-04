@@ -1,12 +1,11 @@
 // C++ program for implement deletion in Heaps
 
 #include <iostream>
-
 using namespace std;
 
 // To heapify a subtree rooted with node i which is
 // an index of arr[] and n is the size of heap
-void heapify(int arr[], int n, int i)
+void heapifyDown(int arr[], int n, int i)
 {
     int largest = i;   // Initialize largest as root
     int l = 2 * i + 1; // left = 2*i + 1
@@ -26,7 +25,7 @@ void heapify(int arr[], int n, int i)
         swap(arr[i], arr[largest]);
 
         // Recursively heapify the affected sub-tree
-        heapify(arr, n, largest);
+        heapifyDown(arr, n, largest);
     }
 }
 
@@ -43,7 +42,7 @@ void deleteRoot(int arr[], int &n)
     n = n - 1;
 
     // heapify the root node
-    heapify(arr, n, 0);
+    heapifyDown(arr, n, 0);
 }
 
 /* A utility function to print array of size n */

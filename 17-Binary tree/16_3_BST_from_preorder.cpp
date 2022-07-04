@@ -51,7 +51,7 @@ void printpreorder(node *root)
 
 int main()
 {
-    int preorder[] = {10, 2, 1, 13, 11};
+    int preorder[] = {10, 2, 1, 15, 11};
     int n = 5;
     int preorderidx = 0;
     node *newroot = constructBST(preorder, &preorderidx, preorder[preorderidx], INT_MIN, INT_MAX, n);

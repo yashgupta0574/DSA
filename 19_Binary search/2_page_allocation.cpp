@@ -33,12 +33,12 @@ int allocateMinPages(int arr[], int n, int m)
     {
         return -1;
     }
-    int sum;
+    int sum = 0;
     for (int i = 0; i < n; i++)
     {
         sum += arr[i];
     }
-    int minm = 0, maxm = sum, ans = INT_MAX;
+    int minm = arr[0], maxm = sum, ans = INT_MAX;
     while (minm < maxm)
     {
         int mid = (minm + maxm) / 2;

@@ -1,5 +1,5 @@
 // count number of binary strings is a case of fibonacci series so watch video 180
-// constraint is that there should not be 1's;
+// constraint is that there should not be consecutive 1's;
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -31,4 +31,4 @@ int main()
 
     return 0;
 }
-// ans=one[n - 1] + zero[n - 1] =zero[i-2]+zero[n-1]==resembles fibonacci
+// ans=one[n - 1] + zero[n - 1] =zero[n-2]+zero[n-1]==resembles fibonacci

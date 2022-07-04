@@ -11,7 +11,7 @@ using namespace std;
 const int N = 1e2 + 2, MOD = 1e9 + 1;
 
 int dp[N];
-int maxm = 0; // it calculates the highest number of current longest subsequence if number is larger than last element of array
+int maxm = 0; // it calculates the highest number in current longest subsequence if number is larger than last greater element in array
 
 int Lis(vi &a, int n)
 {
@@ -22,14 +22,9 @@ int Lis(vi &a, int n)
     dp[n] = 1;
     rep(i, 0, n)
     {
-        if (a[n] > a[i] && a[n] > maxm)
+        if (a[n] > a[i])
         {
             dp[n] = max(dp[n], 1 + Lis(a, i));
-        }
-        else
-        {
-            dp[n] = max(dp[n], Lis(a, i));
-            maxm = a[i];
         }
     }
     return dp[n];
@@ -49,7 +44,12 @@ int main()
     {
         cin >> a[i];
     }
-    cout << Lis(a, n - 1) << endl;
+    Lis(a, n - 1);
+    rep(i, 0, n)
+    {
+        maxm = max(maxm, dp[i]);
+    }
+    cout << maxm << endl;
 
     // iterative
     /*int n;

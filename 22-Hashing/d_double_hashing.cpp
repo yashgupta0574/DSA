@@ -145,7 +145,7 @@ int main()
 
     int insertions[] = {115, 12, 87, 66, 123},
         n1 = sizeof(insertions) / sizeof(insertions[0]);
-    
+
     for (int i = 0; i < n1; i++)
         myHash.insert(insertions[i]);
 

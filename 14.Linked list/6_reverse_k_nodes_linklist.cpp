@@ -71,7 +71,7 @@ int main()
     insertatTail(head, 6);
     display(head);
 
-    int k = 2;
+    int k = 3;
     // int k=4;
     node *newhead = reverse_k_nodes(head, k);
     display(newhead);

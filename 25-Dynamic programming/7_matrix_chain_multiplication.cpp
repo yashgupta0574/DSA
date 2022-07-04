@@ -1,4 +1,4 @@
-//watch abdul bari video youtube
+// watch abdul bari video youtube
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -38,7 +38,7 @@ int dp[N][N];
 
 int main()
 {
-    //memoization
+    // memoization
     /*rep(i, 0, N)
     {
         rep(j, 0, N)
@@ -54,7 +54,7 @@ int main()
         cin >> a[i];
     }
     cout << mcm(a, 1, n - 1) << endl;*/
-    //iterative
+    // iterative
     rep(i, 0, N)
     {
         rep(j, 0, N)

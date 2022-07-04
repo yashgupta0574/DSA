@@ -12,13 +12,13 @@ const int N = 1e2 + 2, MOD = 1e9 + 1;
 
 int main()
 {
-    //iterative
+    // iterative
     vi a = {1, 11, 2, 10, 4, 5, 2, 1};
     int n = 8;
     vi forward(n, 1);
     vi backward(n, 1);
     int ans = 0;
-    
+
     rep(i, 1, n)
     {
         rep(j, 0, i)

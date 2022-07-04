@@ -19,7 +19,7 @@ int main()
     cout<<s1<<s2;*/
 
     /*2.assign
-     string s="sucessful";
+     string s="successful";
      //s.assign("Yash");
      //s="Yash";
      cout<<s<<endl;*/

@@ -15,7 +15,7 @@ int main()
     int n;
     cin >> n;
     vi dp(n + 1, 0);
-    dp[0] = 1; //empty element phi is considered one
+    dp[0] = 1; // empty element phi is considered one
     dp[1] = 1;
     rep(i, 2, n + 1)
     {

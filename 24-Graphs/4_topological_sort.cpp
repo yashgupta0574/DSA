@@ -18,29 +18,24 @@ int main()
 {
     int n, m;
     cin >> n >> m;
-    vvi adj(N);
-    vi indegree(N, -1);
+    vvi adj(n + 1);
+    vi indegree(n + 1, 0);
     rep(i, 0, m)
     {
         int x, y;
         cin >> x >> y;
-        if (indegree[x] == -1)
-        {
-            indegree[x] = 0;
-        }
         adj[x].push_back(y); // x->y
         indegree[y]++;
     }
     queue<int> pq;
 
-    rep(i, 0, N)
+    rep(i, 0, n)
     {
         if (indegree[i] == 0)
         {
             pq.push(i);
         }
     }
-
     while (!pq.empty())
     {
         int x = pq.front();
@@ -58,3 +53,11 @@ int main()
 
     return 0;
 }
+//
+// 6 6
+// 5 0
+// 4 0
+// 5 2
+// 2 3
+// 3 1
+// 4 1

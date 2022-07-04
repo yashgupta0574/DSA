@@ -24,27 +24,6 @@ void prev_great(vector<int> &pg, int hist[])
     }
 }
 
-void next_small(vector<int> &ng, int hist[])
-{
-    stack<int> st;
-    for (int i = ng.size() - 1; i >= 0; i--)
-    {
-        while (!st.empty() && hist[st.top()] <= hist[i])
-        {
-            st.pop();
-        }
-        if (st.empty())
-        {
-            ng[i] = ng.size();
-        }
-        else
-        {
-            ng[i] = st.top();
-        }
-        st.push(i);
-    }
-}
-
 void stockSpan(int hist[], int n)
 {
     vector<int> pg(n, 0);
@@ -53,14 +32,6 @@ void stockSpan(int hist[], int n)
         pg[i] = hist[i];
     }
     prev_great(pg, hist);
-
-    vector<int> ng(n, 0);
-    for (int i = 0; i < ng.size(); i++)
-    {
-        ng[i] = hist[i];
-    }
-    next_small(ng, hist);
-
     //****************************************//
     for (int i = 0; i < pg.size(); i++)
     {
@@ -68,11 +39,6 @@ void stockSpan(int hist[], int n)
     }
     cout << endl;
 
-    for (int i = 0; i < ng.size(); i++)
-    {
-        cout << ng[i] << " ";
-    }
-    cout << endl;
     //****************************************//
     int ans[n];
     for (int i = 0; i < n; i++)

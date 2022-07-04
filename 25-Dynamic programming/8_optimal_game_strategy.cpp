@@ -27,9 +27,9 @@ int solve(int i, int j)
     {
         return dp[i][j];
     }
-    int l = a[i] + min(solve(i + 2, j), solve(i + 1, j - 1)); //if we select a[i]th coin then opponent select optimally
-    //so that other opponet have loss
-    int r = a[j] + min(solve(i + 1, j - 1), solve(i, j - 2)); //if we select a[j]th coin
+    int l = a[i] + min(solve(i + 2, j), solve(i + 1, j - 1)); // if we select a[i]th coin then opponent select optimally
+    // so that other opponet have loss
+    int r = a[j] + min(solve(i + 1, j - 1), solve(i, j - 2)); // if we select a[j]th coin
     dp[i][j] = max(l, r);
     return dp[i][j];
 }

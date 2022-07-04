@@ -10,7 +10,7 @@ using namespace std;
 #define rep(i, a, b) for (int i = a; i < b; i++)
 const int N = 1e2 + 2, MOD = 1e9 + 1;
 
-//int dp[N][N];
+// int dp[N][N];
 
 /*int lcs(string &s1, string &s2, int n, int m)
 {
@@ -35,7 +35,7 @@ const int N = 1e2 + 2, MOD = 1e9 + 1;
 
 int main()
 {
-    //memoization
+    // memoization
 
     /*string s1, s2;
     cin >> s1 >> s2;
@@ -50,7 +50,7 @@ int main()
     }
     cout << lcs(s1, s2, n, m);*/
 
-    //iterative
+    // iterative
     string s1, s2;
     cin >> s1 >> s2;
     int n = s1.size();

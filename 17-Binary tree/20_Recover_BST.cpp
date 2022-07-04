@@ -75,13 +75,17 @@ void inorder(struct node *root)
 
 int main()
 {
-    node *root = new node(10);
-    root->left = new node(5);
-    root->right = new node(15);
-    root->left->left = new node(7);
-    root->left->right = new node(2);
-    root->right->left = new node(11);
-    root->right->right = new node(20);
+    // node *root = new node(10);
+    // root->left = new node(5);
+    // root->right = new node(15);
+    // root->left->left = new node(7);
+    // root->left->right = new node(2);
+    // root->right->left = new node(11);
+    // root->right->right = new node(20);
+    node *root = new node(3);
+    root->left = new node(1);
+    root->right = new node(4);
+    root->right->left = new node(2);
     inorder(root);
     cout << endl;
     restoreBST(root);

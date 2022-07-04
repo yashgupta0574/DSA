@@ -25,7 +25,6 @@ void DNFsort(int arr[], int n)
         else
         {
             swap(arr, mid, r);
-            mid++;
             r--;
         }
     }

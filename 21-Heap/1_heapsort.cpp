@@ -31,7 +31,6 @@ void heapsort(int arr[], int n)
     {
         swap(arr[0], arr[i]);
         heapify(arr, i, 0);
-        cout << endl;
     }
 }
 
@@ -44,7 +43,7 @@ int main()
 
     for (int i = 0; i < n; i++)
         cout << arr[i] << " ";
-    cout << "\n";
+    cout << endl;
 
     return 0;
 }

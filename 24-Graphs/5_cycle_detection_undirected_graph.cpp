@@ -44,7 +44,7 @@ int main()
         adj[y].push_back(x);
     }
     bool cycle = false;
-    vector<bool> visited(n,false);
+    vector<bool> visited(n, false);
     rep(i, 0, n)
     {
         if (!visited[i] && iscycle(i, adj, visited, -1))

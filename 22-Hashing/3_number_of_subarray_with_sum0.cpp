@@ -18,19 +18,12 @@ int main()
         cin >> a[i];
     }
     map<int, int> m;
+    m[0] = 1;
     rep(i, 0, n)
     {
         prefsum += a[i];
+        ans += m[prefsum];
         m[prefsum]++;
-    }
-    map<int, int>::iterator it;
-    for (it = m.begin(); it != m.end(); it++)
-    {
-        int x = it->ss, y = it->ff;
-        if (y != 0)
-            ans += x * (x - 1) / 2;
-        else if (y == 0)
-            ans += x;
     }
     cout << ans << endl;
     return 0;

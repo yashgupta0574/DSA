@@ -39,7 +39,7 @@ int diameter(node *root) // O(n^2)
 }
 
 //******************************* VVVIMP***********************************
-int Diameter(node *root, int *height) // O(n)
+int Diameter(node *root, int *height) // O(n) Simultaneously calculates height too
 {
     if (root == NULL)
     {
@@ -49,11 +49,11 @@ int Diameter(node *root, int *height) // O(n)
     int lh = 0, rh = 0;
     int ldiameter = Diameter(root->left, &lh);
     int rdiameter = Diameter(root->right, &rh);
-    int currdia = lh + rh + 1;
+    int currdia = lh + rh;
     *height = max(lh, rh) + 1;
     return max(currdia, max(ldiameter, rdiameter));
 }
-//*************************VVVIMP************************************************
+//*************************VVVIMP*******************************************
 
 int main()
 {
@@ -67,5 +67,6 @@ int main()
     int height = 0;
     cout << diameter(root) << endl;
     cout << Diameter(root, &height) << endl;
+    cout << height << endl;
     return 0;
 }

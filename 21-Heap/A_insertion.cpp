@@ -7,7 +7,7 @@ using namespace std;
 
 // Function to heapify ith node in a Heap
 // of size n following a Bottom-up approach
-void heapify(int arr[], int n, int i)
+void heapifyUp(int arr[], int n, int i)
 {
     // Find parent
     int parent = (i - 1) / 2;
@@ -23,7 +23,7 @@ void heapify(int arr[], int n, int i)
             swap(arr[i], arr[parent]);
 
             // Recursively heapify the parent node
-            heapify(arr, n, parent);
+            heapifyUp(arr, n, parent);
         }
     }
 }
@@ -39,13 +39,13 @@ void insertNode(int arr[], int &n, int Key)
 
     // Heapify the new node following a
     // Bottom-up approach
-    heapify(arr, n, n - 1);
+    heapifyUp(arr, n, n - 1);
 }
 
 // A utility function to print array of size n
 void printArray(int arr[], int n)
 {
-    for (int i = 0; i < n; ++i)
+    for (int i = 0; i < n; i++)
         cout << arr[i] << " ";
 
     cout << "\n";
@@ -70,10 +70,10 @@ int main()
 
     printArray(arr, n);
     // Final Heap will be:
-    // 15
-    // / \
-	// 5	 10
-    // / \ /
+    //    15
+    //   /  \
+	//  5   10
+    // / \  /
     // 2 4 3
     return 0;
 }

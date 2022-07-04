@@ -37,6 +37,18 @@ int main()
             dist[v] = min(dist[v], dist[u] + w);
         }
     }
+
+    // check one for time for negative cycle is there or not
+    for (auto e : edges)
+    {
+        int u = e[0];
+        int v = e[1];
+        int w = e[2];
+        if (dist[v] != inf && dist[v] < dist[u] + w)
+        {
+            cout << "Graph contain negative edge cycle!!";
+        }
+    }
     rep(i, 0, n)
     {
         cout << dist[i] << " ";
