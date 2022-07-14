@@ -9,7 +9,7 @@ using namespace std;
 #define ss second
 #define rep(i, a, b) for (int i = a; i < b; i++)
 const int m = 1e9 + 7, N = 1e2;
-int a[N], tree[4 *N];
+int a[N], tree[4 * N];
 
 void buildtree(int node, int st, int en)
 {

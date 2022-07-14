@@ -34,7 +34,7 @@ void build(int node, int st, int en)
     tree[node].sum = tree[2 * node].sum + tree[2 * node + 1].sum;
     tree[node].pref = max(tree[2 * node].pref, tree[2 * node].sum + tree[2 * node + 1].pref);
     tree[node].suff = max(tree[2 * node + 1].suff, tree[2 * node + 1].sum + tree[2 * node].suff);
-    tree[node].ans = max(tree[2 * node].suff + tree[2 * node + 1].pref, max(tree[2 * node].ans, tree[2 * node + 1].ans));    
+    tree[node].ans = max(tree[2 * node].suff + tree[2 * node + 1].pref, max(tree[2 * node].ans, tree[2 * node + 1].ans));
 }
 
 void update(int node, int st, int en, int idx, int val)

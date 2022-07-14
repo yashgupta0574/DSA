@@ -67,7 +67,7 @@ pii query(int node, int st, int en, int l, int r)
     }
     else
     {
-        q.ff = q1.ff; // we can also write q=q2 as q1=q2
+        q.ff = q1.ff; // we can also write q.ff=q2.ff as q1=q2
         q.ss = q1.ss + q2.ss;
     }
     return q;

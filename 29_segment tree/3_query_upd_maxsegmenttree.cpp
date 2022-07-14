@@ -27,9 +27,9 @@ int query(int node, int st, int en, int l, int r)
     }
     if (l <= st && r >= en)
     {
-        return tree[node]; //complete segment
+        return tree[node]; // complete segment
     }
-    //partial segment
+    // partial segment
     int mid = (st + en) / 2;
     int q1 = query(2 * node, st, mid, l, r);
     int q2 = query(2 * node + 1, mid + 1, en, l, r);
@@ -75,18 +75,18 @@ int main()
         {
             break;
         }
-        
+
         if (type == 1)
         {
-            int l,r;
+            int l, r;
             cin >> l >> r;
             int ans = query(1, 0, n - 1, l, r);
             cout << ans << endl;
         }
-        
+
         else if (type == 2)
         {
-            int idx,val;
+            int idx, val;
             cin >> idx >> val;
             update(1, 0, n - 1, idx, val);
             int ans = query(1, 0, n - 1, 0, n - 1);

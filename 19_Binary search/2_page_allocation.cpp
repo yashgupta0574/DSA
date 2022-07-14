@@ -57,7 +57,7 @@ int allocateMinPages(int arr[], int n, int m)
 
 int main()
 {
-    int arr[] = {10, 20, 30, 40, 50, 60}; // arr should be ascending if not then sort it
-    cout << allocateMinPages(arr, 6, 4);
+    int arr[] = {12, 34, 67, 90}; // arr should be ascending if not then sort it
+    cout << allocateMinPages(arr, 4, 2);
     return 0;
 }

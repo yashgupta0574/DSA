@@ -1,6 +1,5 @@
 // Reverse of inversion question
 // # Advanced version
-// # Needs to brush up the the concepts for this problem
 #include "bits/stdc++.h"
 using namespace std;
 #define int long long
@@ -85,7 +84,7 @@ signed main()
     vector<int> ans;
     for (int i = n - 1; i >= 0; i--)
     {
-        int k = currPresentSirs - b[i] - 1;
+        int k = currPresentSirs - b[i] - 1; // No of presentsir just before the index(our required ans)
         cout << k << " ";
         currPresentSirs--;
 

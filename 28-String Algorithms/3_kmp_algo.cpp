@@ -32,6 +32,7 @@ void computeLps(string t, int m, vi lps)
             {
                 lps[i] = 0;
                 i++;
+                len++;
             }
         }
     }
@@ -39,16 +40,16 @@ void computeLps(string t, int m, vi lps)
 
 int main()
 {
-    string s = "wow";
-    string t = "ohh wow u are so smart wow";
+    string s = "ohh wow u are so smart wow";
+    string t = "wow";
     int n = s.size();
     int m = t.size();
     vi lps(m + 1, 0);
     computeLps(t, m, lps);
     int i = 0, j = 0;
-    while (i < m)
+    while (i < n)
     {
-        if (t[i] == s[j])
+        if (s[i] == t[j])
         {
             i++;
             j++;
@@ -64,7 +65,7 @@ int main()
                 i++;
             }
         }
-        if (j == n)
+        if (j == m)
         {
             cout << i - j << endl;
             j = lps[j - 1];

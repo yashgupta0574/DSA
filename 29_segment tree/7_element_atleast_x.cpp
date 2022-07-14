@@ -1,4 +1,4 @@
-//application of binary search and segment tree
+// application of binary search and segment tree
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -28,9 +28,9 @@ long long query(int node, int st, int en, int l, int r)
     }
     if (l <= st && r >= en)
     {
-        return tree[node]; //complete segment
+        return tree[node]; // complete segment
     }
-    //partial segment
+    // partial segment
     int mid = (st + en) / 2;
     int q1 = query(2 * node, st, mid, l, r);
     int q2 = query(2 * node + 1, mid + 1, en, l, r);
@@ -101,7 +101,7 @@ int main()
                 }
             }
         }
-        
+
         if (ans == n)
         {
             cout << -1 << endl;

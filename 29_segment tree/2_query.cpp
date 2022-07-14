@@ -33,12 +33,12 @@ int query(int node, int st, int en, int l, int r)
     }
     if (l <= st && r >= en)
     {
-        return tree[node]; //complete segment
+        return tree[node]; // complete segment
     }
-    //partial segment
+    // partial segment
     int mid = (st + en) / 2;
-    int q1 = query(2*node, st, mid, l, r);
-    int q2 = query(2*node+1, mid + 1, en, l, r);
+    int q1 = query(2 * node, st, mid, l, r);
+    int q2 = query(2 * node + 1, mid + 1, en, l, r);
     return q1 + q2;
 }
 
@@ -54,7 +54,7 @@ int main()
     while (1)
     {
         int type;
-        cin >> type;//type any number >0 to continue searching result
+        cin >> type; // type any number >0 to continue searching result
         if (type < 0)
         {
             break;

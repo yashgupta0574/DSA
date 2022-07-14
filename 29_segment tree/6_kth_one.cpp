@@ -28,7 +28,7 @@ int kthOne(int node, int st, int en, int k)
     }
 
     int mid = (st + en) / 2;
-    if (k < tree[2 * node])
+    if (k <= tree[2 * node])
     {
         return kthOne(2 * node, st, mid, k);
     }

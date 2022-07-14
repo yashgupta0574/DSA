@@ -46,7 +46,7 @@ void update(int node, int st, int en, int idx, int val)
     tree[node] = tree[2 * node] + tree[2 * node + 1];
 }
 
-bool compare(triplet t1, triplet t2) //custom comparator
+bool compare(triplet t1, triplet t2) // custom comparator
 {
     return t1.r < t2.r;
 }

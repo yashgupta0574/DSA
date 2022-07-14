@@ -46,7 +46,7 @@ void update(int node, int st, int en, int idx, int val)
     tree[node] = tree[2 * node] + tree[2 * node + 1];
 }
 
-bool compare(triplet t1, triplet t2)//custom comparator
+bool compare(triplet t1, triplet t2) // custom comparator
 {
     return t1.r < t2.r;
 }
@@ -73,7 +73,7 @@ signed main()
         {
             t[x - 1].r = i;
         }
-        t[x - 1].idx = x;
+        t[x - 1].idx = x - 1;
     }
 
     sort(t.begin(), t.end(), compare);
@@ -82,7 +82,7 @@ signed main()
 
     for (int i = 0; i < n; i++)
     {
-        ans[t[i].idx - 1] = query(1, 0, 2 * n - 1, t[i].l, t[i].r);
+        ans[t[i].idx] = query(1, 0, 2 * n - 1, t[i].l, t[i].r);
         update(1, 0, 2 * n - 1, t[i].l, 1);
     }
 

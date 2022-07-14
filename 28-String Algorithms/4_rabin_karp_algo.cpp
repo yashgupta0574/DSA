@@ -38,7 +38,7 @@ int32_t main()
 
     rep(i, 0, T - A + 1)
     {
-        int curr_h = (hash[i + A] - hash[i] + m) % m; //+m because h[i+A] can be less than h[i] so that ans would not come negative
+        int curr_h = (hash[i + A] - hash[i] + m) % m; //+m because h[i+A] can be less than h[i] so that overall remains positive
         if (curr_h == (hs * powers[i]) % m)
         {
             cout << "Found at:" << i << endl;

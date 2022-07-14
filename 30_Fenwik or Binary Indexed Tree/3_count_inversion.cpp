@@ -41,9 +41,9 @@ signed main()
     int inv = 0;
     for (int i = n - 1; i >= 0; i--)
     {
-        inv+=query(a[i]-1);
-        update(a[i],1);
+        inv += query(a[i] - 1);
+        update(a[i], 1);
     }
-    cout<<inv<<endl;
+    cout << inv << endl;
     return 0;
 }

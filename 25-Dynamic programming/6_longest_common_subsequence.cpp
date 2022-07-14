@@ -62,7 +62,7 @@ int main()
         {
             if (i == 0 || j == 0)
             {
-                dp[n][m] = 0;
+                dp[i][j] = 0;
                 continue;
             }
             if (s1[i - 1] == s2[j - 1])
