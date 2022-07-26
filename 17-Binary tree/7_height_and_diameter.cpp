@@ -49,7 +49,7 @@ int Diameter(node *root, int *height) // O(n) Simultaneously calculates height t
     int lh = 0, rh = 0;
     int ldiameter = Diameter(root->left, &lh);
     int rdiameter = Diameter(root->right, &rh);
-    int currdia = lh + rh;
+    int currdia = lh + rh + 1;
     *height = max(lh, rh) + 1;
     return max(currdia, max(ldiameter, rdiameter));
 }

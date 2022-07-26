@@ -52,7 +52,7 @@ int main()
                 {
                     found = true;
                 }
-                if (t + die <= 100 && lad[t + die] && !vis[lad[t + die]])
+                else if (t + die <= 100 && lad[t + die] && !vis[lad[t + die]])
                 {
                     vis[lad[t + die]] = true;
                     q.push(lad[t + die]);

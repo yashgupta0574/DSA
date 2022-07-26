@@ -21,7 +21,7 @@ int main()
     vi zero(n + 1, 0);
     // one denotes string ending with 1
     // 0 denotes string ending with 0
-    one[0] = zero[0] = 1; // teo case either 1 or 0 for n=1
+    one[0] = zero[0] = 1; // the case either 1 or 0 for n=1
     rep(i, 1, n)
     {
         one[i] = zero[i - 1];

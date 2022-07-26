@@ -29,6 +29,7 @@ int main()
             }
         }
     }
+
     for (int i = n - 1; i >= 0; i--)
     {
         for (int j = n - 1; j > i; j--)
@@ -39,6 +40,7 @@ int main()
             }
         }
     }
+
     rep(i, 0, n)
     {
         ans = max(ans, forward[i] + backward[i] - 1);

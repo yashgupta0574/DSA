@@ -52,7 +52,7 @@ int main()
     cin >> x;
     vi dp(x + 1, 0);
     dp[0] = 1;
-    rep(i, 0, m + 1)
+    rep(i, 1, m + 1)
     {
         rep(j, 0, x + 1)
         {

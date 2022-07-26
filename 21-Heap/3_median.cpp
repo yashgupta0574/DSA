@@ -77,6 +77,7 @@ double findmedian()
 
 int main()
 {
+
     insert(10);
     cout << findmedian() << endl;
     insert(20);

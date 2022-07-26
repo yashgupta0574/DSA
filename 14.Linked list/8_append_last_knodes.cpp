@@ -12,6 +12,7 @@ public:
         next = NULL;
     }
 };
+
 void insertatTail(node *&head, int val)
 {
     node *n = new node(val);
@@ -79,23 +80,23 @@ void display(node *head)
 int main()
 {
     node *head = NULL;
-    int n;
-    cin >> n;
-    int arr[n];
-    for (int i = 0; i < n; i++)
-    {
-        cin >> arr[i];
-        insertatTail(head, arr[i]);
-    }
-    /*insertatTail(head, 1);
+    // int n;
+    // cin >> n;
+    // int arr[n];
+    // for (int i = 0; i < n; i++)
+    // {
+    //     cin >> arr[i];
+    //     insertatTail(head, arr[i]);
+    // }
+    insertatTail(head, 1);
     insertatTail(head, 2);
     insertatTail(head, 3);
     insertatTail(head, 4);
     insertatTail(head, 5);
-    insertatTail(head, 6);*/
+    insertatTail(head, 6);
     display(head);
 
-    int k = 3;
+    int k = 2;
     node *newhead = append_last_k_nodes(head, k);
     display(newhead);
 

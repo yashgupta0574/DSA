@@ -56,7 +56,7 @@ public:
             if (!vis[top])
             {
                 ans++;
-                dfs(top, tran);
+                dfs1(top, tran);
             }
             st.pop();
         }

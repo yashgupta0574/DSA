@@ -100,7 +100,7 @@ void inorder(struct node *root)
     cout << root->data << " ";
     inorder(root->right);
 }
-
+ 
 int main()
 {
     struct node *root = NULL;

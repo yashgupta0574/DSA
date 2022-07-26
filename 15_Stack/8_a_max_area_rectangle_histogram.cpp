@@ -13,7 +13,7 @@ int getArea(int hist[], int n)
     {
         if (st.empty() || hist[st.top()] <= hist[i])
         {
-            cout << "i=" << i << " ";
+            // cout << "i=" << i << " ";
             st.push(i++);
         }
         else

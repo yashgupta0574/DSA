@@ -62,23 +62,24 @@ int getArea(int hist[], int n)
     next_small(ns, hist);
 
     //****************************************//
-    for (int i = 0; i < ps.size(); i++)
-    {
-        cout << ps[i] << " ";
-    }
-    cout << endl;
+    // for (int i = 0; i < ps.size(); i++)
+    // {
+    //     cout << ps[i] << " ";
+    // }
+    // cout << endl;
 
-    for (int i = 0; i < ns.size(); i++)
-    {
-        cout << ns[i] << " ";
-    }
-    cout << endl;
+    // for (int i = 0; i < ns.size(); i++)
+    // {
+    //     cout << ns[i] << " ";
+    // }
+    // cout << endl;
     //****************************************//
 
     int largest_area = 0;
     for (int i = 0; i < n; i++)
     {
         int curr_area = (ns[i] - ps[i] - 1) * hist[i];
+        cout << curr_area << " ";
         largest_area = max(largest_area, curr_area);
     }
     return largest_area;

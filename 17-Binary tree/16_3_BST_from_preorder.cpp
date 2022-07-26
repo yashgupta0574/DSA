@@ -20,7 +20,6 @@ node *constructBST(int preorder[], int *preorderidx, int ele, int min, int max, 
     {
         return NULL;
     }
-
     node *root = NULL;
     if (ele > min && ele < max)
     {

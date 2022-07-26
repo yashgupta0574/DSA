@@ -57,7 +57,7 @@ int main()
     cout << "Max=" << mx << endl;
     cout << "Min=" << mn << endl;
 
-    partial_sum(v3.begin(), v3.end(), v3.begin()); // conver tin prefix sum like input is 1 2 3 4 then ans will be 1 3 6 10
+    partial_sum(v3.begin(), v3.end(), v3.begin()); // convert in prefix sum like input is 1 2 3 4 then ans will be 1 3 6 10
 
     /*sort(v3.begin(), v3.end());
     cout << "Sorted array is:" << endl;*/

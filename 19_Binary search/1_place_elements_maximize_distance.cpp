@@ -23,7 +23,7 @@ int largestMinDistance(int arr[], int n, int k)
 {
     sort(arr, arr + n);
     int result = -1;
-    int left = 1, right = arr[n - 1];
+    int left = arr[0], right = arr[n - 1];
     while (left < right)
     {
         int mid = (left + right) / 2;

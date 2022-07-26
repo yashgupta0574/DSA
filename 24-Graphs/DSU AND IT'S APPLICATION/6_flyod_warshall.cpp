@@ -19,9 +19,9 @@ int main()
         {inf, inf, inf, 0}};
     int n = graph.size();
     vvi dist = graph;
-    rep(i, 0, n)
+    rep(k, 0, n)
     {
-        rep(k, 0, n)
+        rep(i, 0, n)
         {
             rep(j, 0, n)
             {
@@ -32,6 +32,7 @@ int main()
             }
         }
     }
+    
     rep(i, 0, n)
     {
         rep(j, 0, n)

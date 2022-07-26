@@ -1,7 +1,7 @@
 #include "bits/stdc++.h"
 using namespace std;
 
-void solve(vector<int> &nums, vector<vector<int>> &ans, int idx)
+void solve(vector<int> nums, vector<vector<int>> &ans, int idx)
 {
     if (idx == nums.size())
     {
@@ -12,7 +12,6 @@ void solve(vector<int> &nums, vector<vector<int>> &ans, int idx)
     {
         swap(nums[i], nums[idx]);
         solve(nums, ans, idx + 1);
-        swap(nums[i], nums[idx]); // In this we have taken nums by reference so we need to swap once again compared to permutation2.cpp
     }
 }
 

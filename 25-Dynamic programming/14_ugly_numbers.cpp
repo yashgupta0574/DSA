@@ -16,7 +16,6 @@ int main()
     int n = 10;
     // cin >> n;
     vi dp(n + 1, 1);
-    dp[0] = 1;
     // int c2 = 0, c3 = 0, c5 = 0;
     int c2(0), c3(0), c5(0); // it means c2=c3=c5=0
     rep(i, 1, n + 1)

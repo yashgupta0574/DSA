@@ -78,7 +78,7 @@ void removecycle(node *&head)
     {
         while (slow->next != fast)
         {
-            slow - slow->next;
+            slow = slow->next;
         }
         slow->next = NULL;
         return;
