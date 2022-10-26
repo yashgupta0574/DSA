@@ -12,7 +12,7 @@ vector<vector<int>> permute(vector<int> nums)
     return ans;
 }
 
-int32_t main()
+int main()
 {
     vector<vector<int>> res = permute({1, 2, 2, 3});
     for (auto i : res)

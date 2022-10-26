@@ -9,14 +9,14 @@ using namespace std;
 #define ss second
 #define rep(i, a, b) for (int i = a; i < b; i++)
 
-void computeLps(string t, int m, vi lps)
+void computeLps(string pat, int m, vi &lps)
 {
     int len = 0;
     int i = 1;
-    lps[0] = 0; // lps=longest prefix which is same as suffix
+    lps[0] = 0; // lps is longest proper prefix which is same as suffix
     while (i < m)
     {
-        if (t[i] == t[len])
+        if (pat[i] == pat[len])
         {
             lps[i] = len + 1;
             i++;
@@ -24,15 +24,11 @@ void computeLps(string t, int m, vi lps)
         }
         else
         {
-            if (len != 0)
-            {
-                len = lps[len - 1];
-            }
+            if (len != 0) len = lps[len - 1];
             else
             {
                 lps[i] = 0;
                 i++;
-                len++;
             }
         }
     }
@@ -40,30 +36,24 @@ void computeLps(string t, int m, vi lps)
 
 int main()
 {
-    string s = "ohh wow u are so smart wow";
-    string t = "wow";
-    int n = s.size();
-    int m = t.size();
+    string txt = "I am rated 4 stars at codechef and having max rating of 1326 on codeforces";
+    string pat = "star";
+    int n = txt.size();
+    int m = pat.size();
     vi lps(m + 1, 0);
-    computeLps(t, m, lps);
+    computeLps(pat, m, lps);
     int i = 0, j = 0;
     while (i < n)
     {
-        if (s[i] == t[j])
+        if (txt[i] == pat[j])
         {
             i++;
             j++;
         }
         else
         {
-            if (j != 0)
-            {
-                j = lps[j - 1];
-            }
-            else
-            {
-                i++;
-            }
+            if (j != 0) j = lps[j - 1];
+            else i++;
         }
         if (j == m)
         {
