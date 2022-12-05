@@ -65,7 +65,7 @@ double findmedian()
     {
         return (pqmin.top() + pqmax.top()) / 2.0;
     }
-    else if (pqmin.size() >= pqmax.size())
+    else if (pqmin.size() > pqmax.size())
     {
         return pqmin.top();
     }
@@ -77,7 +77,6 @@ double findmedian()
 
 int main()
 {
-
     insert(10);
     cout << findmedian() << endl;
     insert(20);
